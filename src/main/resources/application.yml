@@ -2,6 +2,9 @@ server:
   port: 8080
 
 spring:
+  profiles:
+    active: local # local profile 사용하기 위한 설정
+
   h2:
     console:
       enabled: true
@@ -13,6 +16,6 @@ spring:
     driver-class-name: org.h2.Driver
 
   flyway:
-    enabled: true # 기본값 = true 이지만, flyway를 사용하고 있음을 명시해줍니다.
+    enabled: false # 운영환경에서 flyway가 동작하는 것을 방지하기 위하여 false로 설정
     baseline-on-migrate: true # Baseline 생성이 필요한 상황에서 migration 작업 실행시, Baseline 생성부터 하겠다는 설정
 

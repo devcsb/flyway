@@ -1,0 +1,4 @@
+spring:
+  flyway:
+    enabled: true # 로컬 환경에서만 Flyway 동작되도록 설정
+    locations: classpath:db/migration, classpath:db/seed # 경로가 여러 개일 경우 쉼표(,)로 구분합니다.
