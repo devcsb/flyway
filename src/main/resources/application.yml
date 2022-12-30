@@ -14,4 +14,5 @@ spring:
 
   flyway:
     enabled: true # 기본값 = true 이지만, flyway를 사용하고 있음을 명시해줍니다.
+    baseline-on-migrate: true # Baseline 생성이 필요한 상황에서 migration 작업 실행시, Baseline 생성부터 하겠다는 설정
 
