@@ -242,7 +242,7 @@ flyway_schema_history 테이블에서, 버전 3에 해당하는 Row를 지워줍
    spring:
      flyway:
        enabled: true
-         locations: classpath:db/migration, classpath:db/seed # 경로가 여러 개일 경우 쉼표(,)로 구분합니다.
+       locations: classpath:db/migration, classpath:db/seed # 경로가 여러 개일 경우 쉼표(,)로 구분합니다.
    ```
 
 2. application.yml 파일에 local profile 사용을 명시하고,  
