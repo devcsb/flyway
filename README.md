@@ -219,7 +219,7 @@ ALTER TABLE member ADD age INT DEFAULT 0;
 이제 Rollback을 해보겠습니다.  
 Rollback을 하려면, 먼저 롤백 대상인 V3 마이그레이션을 보면서, 변경된 스키마 내용을 다시 되돌립니다.
 
-아래 명령어로, member table에 age 컬럼을 삭제합니다.
+아래 쿼리로, member table에 age 컬럼을 삭제합니다.
 
 ```sql
 ALTER TABLE MEMBER DROP COLUMN age;
@@ -272,7 +272,7 @@ flyway_schema_history 테이블에서, 버전 3에 해당하는 Row를 지워줍
    ```
 
 지금까지 다양한 시나리오에서 Flyway를 이용하여 DB 스키마를 코드로 관리하는 Hands-On-Lab Session을 진행했습니다.
-이번 실습의 내용만 잘 숙지하신다면, 여러분들은 이미 Flyway를 실무에 적용하여 사용하는데 충분한 수준입니다.
+이번 실습만 잘 따라오셨다면, 여러분들은 이미 Flyway를 실무에 적용하여 사용하기에 충분한 수준이 된 것입니다.
 
 2022년의 마지막 날, 마지막 발표까지, 긴 시간 Hands-On-Lab Session에 참가해주셔서 정말 감사합니다!
 
