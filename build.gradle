@@ -26,7 +26,6 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 	implementation 'org.flywaydb:flyway-core' // Application 에 flyway library 의존성 추가
-
 }
 
 tasks.named('test') {

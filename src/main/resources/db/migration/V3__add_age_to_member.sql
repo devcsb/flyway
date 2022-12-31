@@ -1,0 +1,1 @@
+ALTER TABLE member ADD age INT DEFAULT 0;

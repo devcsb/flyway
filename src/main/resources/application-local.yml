@@ -1,0 +1,4 @@
+spring:
+  flyway:
+    enabled: true
+    locations: classpath:db/migration, classpath:db/seed # 경로가 여러 개일 경우 쉼표(,)로 구분합니다.

@@ -2,7 +2,11 @@ server:
   port: 8080
 
 spring:
-  h2:
+  spring:
+    profiles:
+      active: local # local profile 사용하기 위한 설정
+
+  h2:     # h2 db 임베디드 버전
     console:
       enabled: true
 
@@ -13,5 +17,6 @@ spring:
     driver-class-name: org.h2.Driver
 
   flyway:
-    enabled: true # 기본값 = true 이지만, flyway를 사용하고 있음을 명시해줍니다.
-
+    enabled: false # 기본값 = true 이지만, flyway를 사용하고 있음을 명시해줍니다.
+    # local 에서만 true로 되도록 설정한다.
+    baseline-on-migrate: true  # 베이스라인 설정 값이 필요한 상황에서 마이그레이션 설정 값
