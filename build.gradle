@@ -15,7 +15,7 @@ repositories {
 
 /* flyway gradle plugin에서 사용하는 설정값 블록 */
 flyway {
-	url = 'jdbc:h2:~/flyway'
+	url = 'jdbc:h2:~/flyway;AUTO_SERVER=TRUE'
 	user = 'sa'
 }
 
