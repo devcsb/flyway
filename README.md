@@ -222,7 +222,7 @@ Rollback을 하려면, 먼저 롤백 대상인 V3 마이그레이션을 보면�
 아래 쿼리로, member table에 age 컬럼을 삭제합니다.
 
 ```sql
-ALTER TABLE MEMBER DROP COLUMN age;
+ALTER TABLE member DROP COLUMN age;
 ```
 
 age 컬럼은 삭제되었지만, flyway_schema_history 테이블에는 기록이 남아있는 것을 확인할 수 있습니다.  
