@@ -145,7 +145,14 @@ JDBC URL 란에 jdbc:h2:~/flyway 경로를 입력하고, 연결 버튼을 눌러
    ```sql
    INSERT INTO member(name) VALUES ('최수봉');
    ```
-
+   
+주의사항
+```
+우리는 실습의 편의상, 로컬에 별도의 db 설치 없이 h2 database를 Embedded 모드로 사용 중입니다.
+h2 DB를 embedded 모드(파일 모드)로 사용하는 경우, 멀티 커넥션이 허용되지않아 db접근에 문제가 발생할 수 있습니다.  
+그러므로, 이번 실습에서는 실행 중인 어플리케이션을 먼저 종료한 다음
+flyway gradle plugin을 사용하도록 합니다.
+```
 6. Gradle plugin으로 Migration을 수행합니다.
 
    아래 사진과 같이, IntelliJ 우측 상단 Gradle 탭-프로젝트명-Tasks-flyway 패키지를 보시면  
