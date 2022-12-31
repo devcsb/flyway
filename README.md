@@ -228,6 +228,11 @@ ALTER TABLE MEMBER DROP COLUMN age;
 age 컬럼은 삭제되었지만, flyway_schema_history 테이블에는 기록이 남아있는 것을 확인할 수 있습니다.  
 flyway_schema_history 테이블에서, 버전 3에 해당하는 Row를 지워줍니다.
 
+```sql
+DELETE FROM "flyway_schema_history" WHERE "version" = 3;
+```
+
+
 ![delete](https://user-images.githubusercontent.com/88491798/210047844-842f4997-5654-48a3-b44f-a5bef317ec1f.png)
 
 이렇게 스키마 구조도 이전 버전의 스키마 구조로 복구되었고, 변경이력 또한 삭제되었습니다.  
