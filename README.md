@@ -132,7 +132,7 @@ JDBC URL 란에 jdbc:h2:~/flyway 경로를 입력하고, 연결 버튼을 눌러
 
 
 지금까지 우리는 애플리케이션에 Flyway Library 의존성을 추가하여,
-애플리케이션 부트스트랩 단계에서 Migration 작업을 수행시켜봤습니다.
+애플리케이션 부트스트랩 단계에서 Migration 작업을 수행시켜봤습니다.  
 이 방식은 배포환경에서 유용하게 사용할 수 있습니다.
 
 하지만, Application을 재시작 시키지 않고 Migration 작업만 해야하는 상황도 존재합니다.
@@ -146,13 +146,13 @@ JDBC URL 란에 jdbc:h2:~/flyway 경로를 입력하고, 연결 버튼을 눌러
    INSERT INTO member(name) VALUES ('최수봉');
    ```
    
-주의사항
-```
-우리는 실습의 편의상, 로컬에 별도의 db 설치 없이 h2 database를 Embedded 모드로 사용 중입니다.
-h2 DB를 embedded 모드(파일 모드)로 사용하는 경우, 멀티 커넥션이 허용되지않아 db접근에 문제가 발생할 수 있습니다.  
-그러므로, 이번 실습에서는 실행 중인 어플리케이션을 먼저 종료한 다음
-flyway gradle plugin을 사용하도록 합니다.
-```
+   
+:bomb:주의사항
+
+>우리는 실습의 편의상, 로컬에 별도의 dbms 설치 없이 h2 database를 Embedded 모드로 사용 중입니다.  
+>h2 DB를 embedded 모드(파일 모드)로 사용하는 경우, 멀티 커넥션이 허용되지않아 db접근에 문제가 발생할 수 있습니다.  
+>그러므로, 이번 실습에서는 실행 중인 어플리케이션을 먼저 종료한 다음, Gradle plugin을 통해 Migration 작업을 하도록 합니다.
+
 6. Gradle plugin으로 Migration을 수행합니다.
 
    아래 사진과 같이, IntelliJ 우측 상단 Gradle 탭-프로젝트명-Tasks-flyway 패키지를 보시면  
